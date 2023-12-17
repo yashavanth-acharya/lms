@@ -6,8 +6,8 @@ export default function Sighup() {
   const [isPasswordVisible, setIsPasswordVisible] = useState<Boolean>(false);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex w-[50%] mt-28">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 p-5">
+      <div className="flex lg:w-[50%] mt-28">
       <div className="w-full ">
       <h1 className="text-xl font-bold leading-tight tracking-tight mb-1">
       Create your account

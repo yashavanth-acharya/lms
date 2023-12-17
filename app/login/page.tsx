@@ -7,8 +7,8 @@ export default function Home() {
   const [isPasswordVisible, setIsPasswordVisible] = useState<Boolean>(false);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex w-96 mt-32">
+    <main className="flex min-h-screen flex-col items-center justify-between lg:p-24 p-5">
+      <div className="flex lg:w-96 mt-32">
       <div className="w-full ">
       <h1 className="text-xl font-bold leading-tight tracking-tight mb-1">
       Sign in to your account

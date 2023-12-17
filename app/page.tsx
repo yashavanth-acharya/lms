@@ -6,20 +6,38 @@ export default function Home() {
     <main className="">
       <div className="p-0 flex justify-between items-center m-0 ">
         <div className="p-5 justify-center flex  flex-col  mt-28 xl:w-[50%] ">
-        <div className="z-10 relative xl:hidden">
-            <Image src={Img1} alt="" width={500} height={500} />
+          <div className=" relative xl:hidden flex justify-center items-center">
+            <svg
+              id="visual"
+              viewBox="0 0 900 600"
+              width="900"
+              height="600"
+              xmlns="http://www.w3.org/2000/svg"
+             className="absolute -z-20"
+              version="1.1"
+            >
+              <g transform="translate(501.61127181924627 329.9124346276257)">
+                <path
+                  d="M143.5 -144.2C180.5 -106.5 201.3 -53.3 200.4 -0.8C199.6 51.6 177.2 103.2 140.2 134.5C103.2 165.7 51.6 176.6 -2 178.6C-55.6 180.6 -111.3 173.8 -167.9 142.5C-224.6 111.3 -282.3 55.6 -298.7 -16.4C-315.1 -88.4 -290.1 -176.8 -233.4 -214.4C-176.8 -252.1 -88.4 -239.1 -17.6 -221.5C53.3 -203.9 106.5 -181.9 143.5 -144.2"
+                  fill="#79e4d4"
+                ></path>
+              </g>
+            </svg>
+            <Image src={Img1} alt=""  height={500} />
           </div>
           <h1 className="fontstyle  text-['Pacifico',cursive]  text-7xl xl:text-8xl lg:text-5xl">
             Library management{" "}
           </h1>
-          <p className="text-justify relative  block mt-5" >
+          <p className="text-justify relative  block mt-5">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sed,
             ipsam quia usto, eius consequuntur veniam natus ex non inventore
             architecto, ratione adipisci cupiditate maxime voluptate. Maiores
             corporis nihil provident!
           </p>
 
-          <button className="bg-[#46e7d4] hover:bg-[#61efe1] p-3  rounded text-white w-40 mt-6" >Read more</button>
+          <button className="bg-[#46e7d4] hover:bg-[#61efe1] p-3  rounded-full text-white w-40 mt-6">
+            Read more
+          </button>
         </div>
         <div className="hidden xl:block ">
           <div className="z-10 relative top-40">
