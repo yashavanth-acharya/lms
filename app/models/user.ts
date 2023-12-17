@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     unique: true,
     lowercase: true,
     validate: {
-      validator: (value) => {
+      validator: (value:any) => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
       },
       message: 'Invalid email format',
@@ -39,8 +39,7 @@ const userSchema = new mongoose.Schema({
   },
   password:{
     type:String,
-    required: [true, 'Password is required '],
-    select: false
+    required: [true, 'Password is required ']
   },
     createdAt: Date,
     updatedAt: Date,
@@ -48,9 +47,9 @@ const userSchema = new mongoose.Schema({
 },{ timestamps: true });
 
 userSchema.pre('save', function () {
-	const hashedPassword = bcrypt.hashSync(this.password || uuid(), 12);
+	const hashedPassword = bcrypt.hashSync(this.password, 12);
 	this.password = hashedPassword;
 });
-const User = mongoose.model('User', userSchema);
+const User = mongoose.models.User || mongoose.model('User', userSchema);
 
 export default User;

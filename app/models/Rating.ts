@@ -13,6 +13,6 @@ const ratingsSchema = new mongoose.Schema({
 },{ timestamps: true });
 
 
-const ratings = mongoose.model('ratings', ratingsSchema);
+const ratings =mongoose.models.ratings || mongoose.model('ratings', ratingsSchema);
 
 export default ratings;
