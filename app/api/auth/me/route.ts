@@ -1,5 +1,4 @@
 import { NextRequest,NextResponse } from "next/server";
-import { getServerSession, } from "next-auth/next"
 import User from "@/app/models/user";
 
 module.exports={

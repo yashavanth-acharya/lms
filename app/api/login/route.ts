@@ -22,7 +22,6 @@ module.exports=
         if(!user || !pass){
             return NextResponse.json({message:"Invalid credentials"},{status:400})
         }
-        console.log(user)
         let payload={id:user._id,username:user.username,email:user.email,type:user.type}
         const token=await jwtGenerate(payload)
     

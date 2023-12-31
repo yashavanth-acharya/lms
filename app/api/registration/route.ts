@@ -10,12 +10,11 @@ module.exports=
     try{
         await db()
         const body=await req.json()
-        const {username,name,password,email,phone}=body
         await User.create(body)
         return NextResponse.json({message:"User created"},{status:200})
     }catch(e:any){
         return NextResponse.json({message:e.message},{status:400})
     }
-  
+
 }   
 }

@@ -29,7 +29,10 @@ const booksSchema = new mongoose.Schema({
     type:String,
     required: [true, 'Cover Page  is required'],
   },
-  download:Number,
+  download:{
+    type:Number,
+    default:0
+  },
   createdBy:  {
     type: mongoose.Schema.Types.ObjectId,
   },
